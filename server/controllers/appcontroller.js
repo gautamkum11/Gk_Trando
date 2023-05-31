@@ -26,7 +26,7 @@ export async function Signupin(req,res){
                 return res.status(201).send({message: "User registered Successfully"});
             }
         }
-        return res.status(422).send({message : "mobile number already exist"});
+        return res.status(201).send({message : "mobile number already exist"});
     }catch(error){
         return res.status(500).send({error});
     }
@@ -43,21 +43,24 @@ export async function verifyOTP(req,res) {
     {
         req.app.locals.OTP = null;
         const userexist = await User.findOne({mobile});
+        const token = jwt.sign({userId: userexist._id},process.env.SECRET_KEY);
+        res.status(200).cookie("jwtoken",token,{
+            path: "/",
+            httpOnly: true,
+            expires: new Date(Date.now() + 1000 * 600) //10min
+        });
         if(userexist.profession === ' ' || userexist.experience === ' ' || userexist.howknowus === ' ' || userexist.whylearning === ' ' || userexist.time === ' ')
         {
-            const token = jwt.sign({userId: userexist._id},process.env.SECRET_KEY,{expiresIn: "5h"});
-        
-            res.cookie("jwtoken",token,{httpOnly: true,expiresIn: "5h"});
             return res.status(200).send({
                 message: "Verified successfully",
                 token
             });
         }
-        return res.status(422).send({message : "move to dashboard"});
+        return res.status(200).send({message : "dashboard"});
     }
     else 
     {
-        res.status(400).send({error: "Invalid otp"});
+        res.status(200).send({message : "Invalid otp"});
     }
 }
 

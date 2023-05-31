@@ -1,13 +1,608 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap');
+*{
+    margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.back {
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    margin-left: 3.2rem;
+    padding-top: 1rem;
+}
+
+.signin-1{
+    position: relative;
+    height: 926px;
+    background: #DFE5FC;
+    overflow: hidden;
+}
+
+.signincircle-1 {
+    position: absolute;
+    width: 60rem;
+    height: 60rem;
+    left: -20rem;
+    top: -40rem;
+    border-radius: 50%;
+    background: #272D51;
+}
+
+.signincircle-2 {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    right: 0rem;
+    top: 45rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.signincircle-3 {
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    right: 12rem;
+    /* left: 254px; */
+    top: 45rem;
+    border-radius: 50%;
+    background: #272D51;
+}
+
+.signin-2 {
+    position: absolute;
+    width: 20rem;
+    height: 108px;
+    left: 4rem;
+    top: 5rem;
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 54px;
+    color: #FFFFFF;
+}
+
+.signin-3 {
+    position: absolute;
+    width: 18rem;
+    height: 49px;
+    left: 4.2rem;
+    top: 10rem;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 38.1118px;
+    line-height: 45px;
+
+    color: #FFFFFF;
+}
+
+.signin-4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 3rem;
+    /* gap: 17.25px; */
+
+    position: absolute;
+    width: 100%;
+    height: 725px;
+    /* left: -16px; */
+    top: 5rem;
+}
+
+.signin-5 {
+    /* position:absolute; */
+    width: 60%;
+    /* left: 45rem; */
+    /* right: -0.01px; */
+    /* top: 5rem; */
+    padding: 10px;
+    /* bottom: -0.07px; */
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.signin-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.signin-7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 20%;
+    height: 40px;
+    background: #272D51;
+    color: white;
+    border-radius: 3rem;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.signin-8 {
+    width: 100%;
+    /* height: 19px; */
+    margin-top: 2rem;
+    font-family: 'Open sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.6);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.signin-9 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    width: 20%;
+    height: 40px;
+    background:  #FFFFFF;
+    color: rgba(0, 0, 0, 0.6);
+    border: #FFFFFF;
+    border-radius: 3rem;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+@media only screen and (max-width: 400px){
+    .signin-1{
+        width: 429px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .signincircle-1 {
+        width: 55rem;
+        height: 50rem; 
+        left: -30rem;
+        top: -30rem;
+    }
+    .signincircle-2 {
+        width: 20rem;
+        height: 20rem;
+        right: 0rem;
+        top: 50rem;
+    }
+    .signincircle-3 {
+        top: 48rem;
+        right: 12rem;
+        width: 6rem;
+        height: 6rem;
+    }
+    .signin-2{
+        width: 18rem;
+        top: 3rem;
+        left: 2rem;
+    }
+    .signin-3{
+        top: 12rem;
+        left: 2.2rem;
+    }
+}
+
+@media only screen and (max-width: 800px)
+{
+    .back{
+        margin-left: 1.5rem;
+        padding-top: 0.5rem;
+        height: 2rem;
+        width: 2rem;
+    }
+    .signin-4 {
+        align-items: flex-start;
+        padding: 2rem;
+    }
+    .signin-6{
+        justify-content: flex-start;
+    }
+    .signin-5,.signin-8{
+        width: 80%;
+    }
+    .signin-7,.signin-9 {
+        width: 60%;
+        margin-left: 3rem;
+    }
+    .signincircle-3 {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+
+/*verifyotp page css */
+.otp-1 {
+    position: relative;
+    height: 926px;
+    background: #272D51;
+    overflow: hidden;
+}
+
+.otpcircle-1 {
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    left: -5rem;
+    top: -10rem;
+    border-radius: 50%;
+    background: linear-gradient(184.77deg, rgba(223, 229, 252, 0.2) 3.85%, rgba(223, 229, 252, 0) 50%);
+    transform: rotate(146.25deg);
+}
+
+.otpcircle-2 {
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    left: -193px;
+    top: 800px;
+    border-radius: 50%;
+    background: linear-gradient(153.68deg, #323881 -19.27%, #272D51 51.29%);
+}
+
+.otpcircle-3 {
+    position: absolute;
+    width: 666px;
+    height: 666px;
+    right: -20rem;
+    top: 766px;
+    border-radius: 50%;
+    background: #DFE5FC;
+}
+
+.otp-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 100%; */
+    justify-content: center;
+    margin-top: 20vh;
+}
+
+.otpimg {
+    width: 223px;
+    height: 233px;
+    left: 114px;
+    top: 181px;
+}
+
+.otp-3 {
+    /* position: absolute; */
+    width: 30rem;
+    height: 60px;
+    left: 83px;
+    /* top: 455px; */
+    margin-top: 2rem;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 50px;
+    text-align: center;
+    color: #DFE5FC;
+}
+
+.otp-4 {
+    /* position: absolute; */
+    width: 40rem;
+    height: 60.71px;
+    left: 29px;
+    /* top: 510px; */
+    /* margin-top: 0.1rem; */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18.9717px;
+    line-height: 28px;
+    text-align: center;
+    color: #DDE3FA;
+}
+
+.otpinput {
+    font-size: 2rem;
+    width: 3rem;
+    /* height: 3rem; */
+    color: red;
+    background-color: #272D51;
+    border: 0 0 2px 0 solid #B9B9B9;
+    /* border: 1px solid #B9B9B9; */
+}
+
+.otp-5 {
+    /* position: absolute; */
+    /* width: 314px; */
+    height: 24px;
+    left: 66px;
+    /* top: 646px; */
+    margin-top: 2rem;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 520;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration-line: none;
+    color: #B9B9B9;
+}
+
+.otp-6 {
+    /* position: absolute; */
+    width: 200px;
+    height: 24px;
+    left: 66px;
+    /* top: 646px; */
+    margin-top: 2rem;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #B9B9B9;
+}
+
+.otpbutton {
+    /* position: absolute; */
+    width: 315px;
+    height: 50px;
+    left: 58px;
+    color: #FFFFFF;
+    font-size: 1rem;
+    /* top: 684px; */
+    margin-top: 2rem;
+    background: linear-gradient(98.88deg, #272D51 -14.33%, #2A3060 92.04%);
+    border-radius: 28px;
+}
+
+@media only screen and (max-width: 600px) {
+    .otp-3 {
+        font-size: 30px;
+    }
+    .otp-4 {
+        font-size: 15px;
+    }
+    .otpbutton {
+        width: 250px;
+    }
+}
+
+/*Questions css*/
+.q-1 {
+    position: relative;
+    height: 926px;
+    background: #272D51;
+    overflow: hidden;
+}
+
+.qcircle-1 {
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    left: -5rem;
+    top: -10rem;
+    border-radius: 50%;
+    background: linear-gradient(184.77deg, rgba(223, 229, 252, 0.2) 3.85%, rgba(223, 229, 252, 0) 50%);
+    transform: rotate(146.25deg);
+}
+
+.qcircle-2{
+    position: absolute;
+    width: 501px;
+    height: 501px;
+    /* left: 105px; */
+    right: -10rem;
+    top: 619.39px;
+    border-radius: 50%;
+    background: linear-gradient(184.77deg, rgba(223, 229, 252, 0.2) 3.85%, rgba(223, 229, 252, 0) 38.24%);
+    transform: rotate(-53.63deg);
+}
+
+.qcircle-3 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -10rem;
+    top: 416px;
+    border-radius: 50%;
+    background: linear-gradient(184.77deg, rgba(223, 229, 252, 0.2) 3.85%, rgba(223, 229, 252, 0) 38.24%);
+    transform: rotate(90deg);
+}
+
+.q-2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    /* justify-content: center; */
+    width: 52%;
+    height: 150px;
+    margin-left: 20rem;
+    margin-top: 136px;
+    background: linear-gradient(158.54deg, #DFE5FB 1.18%, #FBFCFF 488.1%);
+    box-shadow: 0px 1px 41px rgba(39, 45, 81, 0.25);
+    border-radius: 28px;
+}
+
+.q-3 {
+    /* position: absolute; */
+    width: 30rem;
+    /* height: 123px; */
+    margin-left: 50px;
+    margin-top: 1rem;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30.3111px;
+    line-height: 41px;
+    color: #272D51;
+}
+
+.qimage {
+    position: absolute;
+    left: 70%;
+    /* right: -4.21%; */
+    top: -7rem;
+    /* margin-top: 1rem; */
+    /* bottom: 65.87%; */
+}
+
+.q2image {
+    position: absolute;
+    left: 70%;
+    /* right: -4.21%; */
+    top: -2rem;
+    /* margin-top: 1rem; */
+    /* bottom: 65.87%; */
+}
+
+.q-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 85%;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-left: 14rem;
+}
+
+.q-4-1 {
+    width: 30rem;
+    height: 60px;
+    left: 83px;
+    /* top: 455px; */
+    margin-top: 2rem;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 50px;
+    text-align: center;
+    color: #DFE5FC;
+}
+
+.q2-4-1 {
+    width: 45rem;
+    height: 60px;
+    left: 100px;
+    /* top: 455px; */
+    margin-top: 2rem;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 50px;
+    text-align: center;
+    color: #DFE5FC;
+}
+
+.q-5 {
+    /* border: 1px solid #ccc; */
+    outline: none;
+    width: 60%;
+    height: 60px;
+    padding: 10px;
+    margin-top: 2rem;
+    margin-left: 7rem;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: #2A2F55;
+    background-color: #E3E8FB;
+    display: flex;
+    justify-content: center;
+}
+
+.qbutton {
+    position: absolute;
+    width: 118px;
+    height: 58px;
+    /* left: 340px; */
+    right: 410px;
+    top: 610px;
+    font-size: 1.2rem;
+    background: #DFE5FC;
+    box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+
+@media only screen and (max-width: 1000px){
+    .q-2 {
+        margin-left: 1.5rem;
+        width: 80%;
+    } 
+    .q-3{
+        font-size: 1.5rem;
+        margin-left: 3rem;
+        width: 15rem;
+    }
+    .qimage {
+        left: 50%;
+        height: 15rem;
+        width: 15rem;
+    }
+    .q2image {
+        left: 80%;
+        height: 8rem;
+        width: 8rem;
+    } 
+    .q-4 {
+        justify-content: flex-start;
+        margin-left: 0rem;
+    }
+    .q-5 {
+        margin-left: 2rem;
+        width: 90%;
+        /* height: 10px; */
+    }
+    .q-4-1 {
+        font-size: 20px;
+        width: 20rem;
+    }
+    .q2-4-1 {
+        font-size: 20px;
+        width: 20rem;
+    }
+    .qbutton {
+        right: 20%;
+    }
+}
+
+@media only screen and (max-width: 600px)
+{
+    .q-3{
+        font-size: 1.5rem;
+        margin-left: 10px;
+        width: 15rem;
+    }
+    .qbutton {
+        right: 20%;    
+    }
 }
